@@ -2,5 +2,5 @@ deployment:
   tasks:
     - export DEPLOY_DIR=public_html  # Change this if deploying to a subdirectory
     - /bin/rm -rf ${DEPLOY_DIR}/*  # Clean previous files
-    - /bin/cp -r assets forms index.html Readme.txt starter-page.html ${DEPLOY_DIR}/  # Copy new files
+    - /bin/cp -r assets forms index.html Readme.txt ${DEPLOY_DIR}/  # Copy new files
     - /bin/chmod -R 755 ${DEPLOY_DIR}  # Set correct permissions
