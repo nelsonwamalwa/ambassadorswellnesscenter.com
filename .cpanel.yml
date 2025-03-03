@@ -1,8 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=repositories/ambassadorswellnesscenter.com/index.html/
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp Readme.txt $DEPLOYPATH
-    - /bin/cp -R assets $DEPLOYPATH
-    - /bin/cp -R forms $DEPLOYPATH
+    - export DEPLOYMENT_DIR=/home/ambassad/public_html
+    - /bin/mkdir -p $DEPLOYMENT_DIR
+    - /bin/cp -r * $DEPLOYMENT_DIR/
+    - /bin/find $DEPLOYMENT_DIR -type d -exec chmod 755 {} +
+    - /bin/find $DEPLOYMENT_DIR -type f -exec chmod 644 {} +
