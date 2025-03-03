@@ -1,6 +1,8 @@
 ---
-  deployment:
-    tasks:
-      - export DEPLOYPATH=/home/ambassad/public_html
-      - /bin/cp -R * $DEPLOYPATH/
-  
+deployment:
+  tasks:
+    - export DEPLOYPATH=repositories/ambassadorswellnesscenter.com/index.html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp Readme.txt $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R forms $DEPLOYPATH
