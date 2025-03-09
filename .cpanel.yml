@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYMENT_DIR=/home/ambassad/public_html
+    - export DEPLOYMENT_DIR=repositories/ambassadorswellnesscenter/public_html
     - /bin/mkdir -p $DEPLOYMENT_DIR
     - /bin/cp -r * $DEPLOYMENT_DIR/
     - /bin/find $DEPLOYMENT_DIR -type d -exec chmod 755 {} +
